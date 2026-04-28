@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avidly | Content Hub Fit Assessment</title>
+    <meta
+      name="description"
+      content="Interactive Avidly prototype for assessing whether HubSpot Content Hub is the right CMS for a business."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="content-wrapper site-header__inner">
+        <a class="site-header__logo" href="#intro-screen" aria-label="Avidly">
+          <img
+            src="https://www.avidlyagency.com/hs-fs/hubfs/raw_assets/public/Avidly_Rebuild_2026/images/Avidly_logo_nega_footer.png?width=500&height=200&name=Avidly_logo_nega_footer.png"
+            alt="Avidly"
+          />
+        </a>
+
+        <nav class="site-header__nav" aria-label="Prototype navigation">
+          <a href="#intro-screen">Overview</a>
+          <a href="#assessment-screen">Assessment</a>
+          <a href="#capture-screen">Lead Gate</a>
+          <a href="#results-screen">Results</a>
+        </nav>
+
+        <div class="site-header__meta">
+          <span>Leadership prototype</span>
+        </div>
+      </div>
+    </header>
+
+    <main id="app">
+      <section class="screen screen-active" id="intro-screen" aria-labelledby="intro-title">
+        <section class="hero hero--intro">
+          <div class="hero__blend" aria-hidden="true"></div>
+          <div class="content-wrapper hero__inner">
+            <div class="hero__copy">
+              <p class="section-kicker section-kicker--light">Content Hub assessment / Prototype</p>
+              <h1 class="hero__heading" id="intro-title">IS HUBSPOT CONTENT HUB</h1>
+              <h2 class="hero__heading hero__heading--sub">YOUR IDEAL CMS?</h2>
+              <p class="hero__description">
+                A lead generation experience for the Avidly website that helps prospects
+                understand whether HubSpot Content Hub fits the way their business grows,
+                operates, and measures website impact.
+              </p>
+
+              <div class="hero__actions">
+                <button class="button button-primary" id="start-assessment">Start assessment</button>
+                <button class="button button-secondary" id="jump-to-results">Preview result</button>
+              </div>
+            </div>
+
+            <div class="hero__visual" aria-hidden="true">
+              <div class="hero__aura"></div>
+              <div class="hero__glass-shape"></div>
+            </div>
+          </div>
+
+          <div class="content-wrapper hero__stats">
+            <article class="hero__stat">
+              <h3>12</h3>
+              <p>Multiple-choice questions</p>
+            </article>
+            <article class="hero__stat">
+              <h3>100</h3>
+              <p>Point suitability score</p>
+            </article>
+            <article class="hero__stat">
+              <h3>1</h3>
+              <p>HubSpot lead capture gate</p>
+            </article>
+            <article class="hero__stat">
+              <h3>5</h3>
+              <p>Result bands for follow-up</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--light">
+          <div class="content-wrapper intro-grid">
+            <div class="intro-copy">
+              <p class="section-kicker">Why this works</p>
+              <h2>Turn a CMS conversation into a commercial diagnostic.</h2>
+              <p>
+                The experience positions Avidly as a strategic guide rather than just a delivery
+                partner. It helps buyers define requirements, surfaces their current HubSpot
+                maturity, and captures intent at the point where they want a clear recommendation.
+              </p>
+            </div>
+
+            <aside class="intro-card">
+              <div class="accent-line"></div>
+              <p class="card-label">How the prototype flows</p>
+              <ol class="flow-list">
+                <li>Answer 12 scored questions about growth goals, CMS needs, and HubSpot usage.</li>
+                <li>Unlock the result with a demo lead form that simulates the HubSpot step.</li>
+                <li>Review a score, fit band, rationale, and a preview of the data Avidly could capture.</li>
+              </ol>
+            </aside>
+          </div>
+        </section>
+      </section>
+
+      <section class="screen" id="assessment-screen" aria-labelledby="question-title">
+        <section class="band">
+          <div class="content-wrapper band__inner">
+            <div class="band__copy">
+              <p class="section-kicker section-kicker--light">Assessment</p>
+              <h2>Define fit by how the business actually operates.</h2>
+              <p>
+                The strongest Content Hub decisions are usually driven by revenue goals,
+                operational complexity, and CRM alignment rather than CMS feature lists alone.
+              </p>
+            </div>
+
+            <div class="band__progress">
+              <div class="progress-copy">
+                <span id="progress-step">Question 1 of 12</span>
+                <span id="progress-percent">8%</span>
+              </div>
+              <div class="progress-track" aria-hidden="true">
+                <div class="progress-fill" id="progress-fill"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--light">
+          <div class="content-wrapper assessment-grid">
+            <aside class="assessment-sidebar">
+              <div class="sidebar-panel">
+                <p class="card-label">What the score considers</p>
+                <ul class="sidebar-list">
+                  <li>The website’s role in revenue and pipeline.</li>
+                  <li>The pace and ownership of content operations.</li>
+                  <li>Current and future HubSpot maturity.</li>
+                  <li>Governance, scale, reporting, and integration needs.</li>
+                </ul>
+              </div>
+            </aside>
+
+            <div class="question-panel">
+              <div class="question-header">
+                <p class="question-number" id="question-number">01</p>
+                <div>
+                  <p class="question-category" id="question-category">Website Strategy</p>
+                  <h2 id="question-title"></h2>
+                </div>
+              </div>
+
+              <div
+                class="options-grid"
+                id="options-grid"
+                role="radiogroup"
+                aria-labelledby="question-title"
+              ></div>
+
+              <div class="question-actions">
+                <button class="button button-secondary" id="back-button">Back</button>
+                <button class="button button-primary" id="next-button" disabled>Next question</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="screen" id="capture-screen" aria-labelledby="capture-title">
+        <section class="band band--light">
+          <div class="content-wrapper band__inner band__inner--capture">
+            <div class="band__copy band__copy--dark">
+              <p class="section-kicker">Lead capture demo</p>
+              <h2 id="capture-title">Your score is ready.</h2>
+              <p>
+                In production this step would be a HubSpot form. For leadership review, it
+                demonstrates how the conversion moment would feel without sending any data.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--light section--tight-top">
+          <div class="content-wrapper capture-grid">
+            <div class="capture-copy">
+              <div class="capture-point">
+                <span>01</span>
+                <p>Collect contact details at the moment the user wants their result.</p>
+              </div>
+              <div class="capture-point">
+                <span>02</span>
+                <p>Pass score, fit band, and answer data into HubSpot for segmentation.</p>
+              </div>
+              <div class="capture-point">
+                <span>03</span>
+                <p>Trigger the right Avidly follow-up based on sales readiness and fit.</p>
+              </div>
+            </div>
+
+            <div class="capture-form-shell">
+              <div class="accent-line"></div>
+              <p class="card-label">Demo form</p>
+              <form id="lead-form" novalidate>
+                <div class="form-grid">
+                  <label class="field">
+                    <span>First name</span>
+                    <input type="text" name="firstName" autocomplete="given-name" required />
+                  </label>
+                  <label class="field">
+                    <span>Last name</span>
+                    <input type="text" name="lastName" autocomplete="family-name" required />
+                  </label>
+                  <label class="field field-full">
+                    <span>Company name</span>
+                    <input type="text" name="company" autocomplete="organization" required />
+                  </label>
+                  <label class="field field-full">
+                    <span>Email address</span>
+                    <input type="email" name="email" autocomplete="email" required />
+                  </label>
+                  <label class="consent-row field-full">
+                    <input type="checkbox" name="consent" required />
+                    <span>
+                      I understand this is a prototype and agree to demonstrate the lead capture flow.
+                    </span>
+                  </label>
+                </div>
+
+                <p class="form-helper" id="form-helper">
+                  Nothing entered here will be stored or submitted during the demo.
+                </p>
+
+                <div class="question-actions">
+                  <button type="button" class="button button-secondary" id="edit-answers">
+                    Edit answers
+                  </button>
+                  <button type="submit" class="button button-primary">Reveal my result</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="screen" id="results-screen" aria-labelledby="results-title">
+        <section class="hero hero--results">
+          <div class="hero__blend hero__blend--light" aria-hidden="true"></div>
+          <div class="content-wrapper results-hero">
+            <div class="result-score-card">
+              <p class="result-score-label">Suitability score</p>
+              <div class="result-score-value">
+                <strong id="score-value">76</strong>
+                <span>/100</span>
+              </div>
+              <p class="result-band" id="score-band">Strong fit</p>
+            </div>
+
+            <div class="result-summary">
+              <p class="section-kicker section-kicker--light">Assessment result</p>
+              <h2 id="results-title">HubSpot Content Hub looks like a strong fit.</h2>
+              <p class="result-rationale" id="result-rationale"></p>
+              <p class="cap-note" id="cap-note" hidden></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--light section--tight-top">
+          <div class="content-wrapper results-grid">
+            <div class="results-main">
+              <div class="results-cards">
+                <article class="results-card">
+                  <p class="card-label">Why this score makes sense</p>
+                  <ul class="insight-list" id="positive-list"></ul>
+                </article>
+
+                <article class="results-card">
+                  <p class="card-label">What to watch out for</p>
+                  <ul class="insight-list" id="caution-list"></ul>
+                </article>
+              </div>
+
+              <article class="results-card breakdown-card">
+                <div class="results-card__head">
+                  <div>
+                    <p class="card-label">Category breakdown</p>
+                    <p class="results-card__subcopy">
+                      A directional view of where Content Hub appears to fit best.
+                    </p>
+                  </div>
+                  <p class="results-card__meta">Prototype scoring model</p>
+                </div>
+                <div class="breakdown-list" id="breakdown-list"></div>
+              </article>
+
+              <div class="question-actions">
+                <button class="button button-secondary" id="restart-assessment">Retake assessment</button>
+                <button class="button button-primary" id="back-to-start">Return to intro</button>
+              </div>
+            </div>
+
+            <aside class="results-sidebar">
+              <article class="results-card">
+                <div class="accent-line"></div>
+                <p class="card-label">Lead payload preview</p>
+                <p class="results-card__subcopy">
+                  This simulates the visible fields and hidden values that could be passed into
+                  HubSpot after the form step.
+                </p>
+                <dl class="payload-list" id="payload-list"></dl>
+              </article>
+            </aside>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

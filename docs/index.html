@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avidly | Content Hub Fit Assessment</title>
+    <meta
+      name="description"
+      content="Interactive Avidly experience for assessing whether HubSpot Content Hub is the right CMS for a business."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section class="screen screen-active" id="intro-screen" aria-labelledby="intro-title">
+        <section class="hero hero--intro">
+          <div class="hero__blend" aria-hidden="true"></div>
+          <div class="content-wrapper hero__shell">
+            <img
+              class="stage-logo"
+              src="https://www.avidlyagency.com/hs-fs/hubfs/raw_assets/public/Avidly_Rebuild_2026/images/Avidly_logo_nega_footer.png?width=500&height=200&name=Avidly_logo_nega_footer.png"
+              alt="Avidly"
+            />
+
+            <div class="hero__grid">
+              <div class="hero__copy">
+                <p class="section-kicker section-kicker--light">HubSpot Content Hub Assessment</p>
+                <h1 class="hero__heading" id="intro-title">IS HUBSPOT CONTENT HUB</h1>
+                <h2 class="hero__heading hero__heading--sub">YOUR IDEAL CMS?</h2>
+                <p class="hero__description">
+                  Discover whether HubSpot Content Hub is the right fit for your business based
+                  on your growth goals, team structure, website strategy, and current HubSpot
+                  maturity.
+                </p>
+
+                <div class="hero__actions">
+                  <button class="button button-primary" id="start-assessment">Start Assessment</button>
+                </div>
+              </div>
+
+              <div class="hero__visual" aria-hidden="true">
+                <div class="hero__aura"></div>
+                <div class="hero__glass-shape"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="screen" id="assessment-screen" aria-labelledby="question-title">
+        <section class="question-stage">
+          <div class="question-stage__blend" aria-hidden="true"></div>
+          <div class="content-wrapper question-stage__shell">
+            <img
+              class="stage-logo"
+              src="https://www.avidlyagency.com/hs-fs/hubfs/raw_assets/public/Avidly_Rebuild_2026/images/Avidly_logo_nega_footer.png?width=500&height=200&name=Avidly_logo_nega_footer.png"
+              alt="Avidly"
+            />
+
+            <div class="question-stage__frame">
+              <button class="back-link" id="back-button" type="button">Back</button>
+
+              <div class="question-stage__progress">
+                <div class="progress-copy">
+                  <span id="progress-step">Question 1 of 12</span>
+                  <span id="progress-percent">8%</span>
+                </div>
+                <div class="progress-track" aria-hidden="true">
+                  <div class="progress-fill" id="progress-fill"></div>
+                </div>
+              </div>
+              <div class="question-stage__card">
+              <div class="question-header">
+                <div class="question-header__meta">
+                  <p class="question-category" id="question-category">Website Strategy</p>
+                  <p class="question-number" id="question-number">01</p>
+                </div>
+                <h2 id="question-title"></h2>
+              </div>
+
+              <div
+                class="options-grid"
+                id="options-grid"
+                role="radiogroup"
+                aria-labelledby="question-title"
+              ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="screen" id="capture-screen" aria-labelledby="capture-title">
+        <section class="capture-stage">
+          <div class="capture-stage__blend" aria-hidden="true"></div>
+          <div class="content-wrapper capture-stage__shell">
+            <img
+              class="stage-logo"
+              src="https://www.avidlyagency.com/hs-fs/hubfs/raw_assets/public/Avidly_Rebuild_2026/images/Avidly_logo_nega_footer.png?width=500&height=200&name=Avidly_logo_nega_footer.png"
+              alt="Avidly"
+            />
+
+            <div class="capture-stage__body">
+              <div class="capture-copy">
+                <p class="section-kicker section-kicker--light">Unlock Your Report</p>
+                <div class="section-rule" aria-hidden="true"></div>
+                <h2 id="capture-title">Your Score Is Ready</h2>
+                <p class="capture-lead">
+                  Submit your details on the form to receive your score and a report that gives you:
+                </p>
+                <ul class="capture-benefits">
+                  <li>A suitability score out of 100</li>
+                  <li>A breakdown of the factors shaping your result</li>
+                  <li>Recommended next steps based on your answers</li>
+                </ul>
+                <p class="capture-note">
+                  This prototype form is for demonstration only and does not submit data anywhere.
+                </p>
+              </div>
+
+              <div class="capture-form-shell">
+                <form id="lead-form" novalidate>
+                  <div class="form-grid">
+                    <label class="field">
+                      <span>First name*</span>
+                      <input type="text" name="firstName" autocomplete="given-name" required />
+                    </label>
+                    <label class="field">
+                      <span>Last name*</span>
+                      <input type="text" name="lastName" autocomplete="family-name" required />
+                    </label>
+                    <label class="field field-full">
+                      <span>Company name*</span>
+                      <input type="text" name="company" autocomplete="organization" required />
+                    </label>
+                    <label class="field field-full">
+                      <span>Email address*</span>
+                      <input type="email" name="email" autocomplete="email" required />
+                    </label>
+                    <label class="consent-row field-full">
+                      <input type="checkbox" name="consent" required />
+                      <span>I agree to continue the assessment flow for demonstration purposes.</span>
+                    </label>
+                  </div>
+
+                  <p class="form-helper" id="form-helper">
+                    Nothing entered here will be stored or submitted during the demo.
+                  </p>
+
+                  <div class="capture-actions">
+                    <button type="submit" class="button button-secondary capture-submit">
+                      Reveal My Report
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="screen" id="results-screen" aria-labelledby="results-heading">
+        <section class="results-stage">
+          <div class="results-stage__blend" aria-hidden="true"></div>
+          <div class="content-wrapper results-stage__shell">
+            <img
+              class="stage-logo"
+              src="https://www.avidlyagency.com/hs-fs/hubfs/raw_assets/public/Avidly_Rebuild_2026/images/Avidly_logo_nega_footer.png?width=500&height=200&name=Avidly_logo_nega_footer.png"
+              alt="Avidly"
+            />
+
+            <div class="results-stage__body">
+              <div class="results-summary">
+                <p class="section-kicker section-kicker--light">Assessment Report</p>
+                <div class="section-rule" aria-hidden="true"></div>
+                <h1 class="results-main-title" id="results-heading">CMS Suitability Report</h1>
+                <p class="results-summary__meta" id="results-meta"></p>
+                <h2 id="results-title">HubSpot Content Hub looks like a strong fit.</h2>
+                <p class="results-summary__lead" id="result-rationale"></p>
+                <p class="results-summary__body" id="result-rationale-secondary"></p>
+                <p class="cap-note" id="cap-note" hidden></p>
+
+                <div class="results-cta-row">
+                  <a
+                    class="button button-primary button-link"
+                    href="https://www.avidlyagency.com/contact"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Talk To Sales
+                  </a>
+                  <a
+                    class="button button-secondary button-link"
+                    href="https://www.avidlyagency.com/contact"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Book A Demo
+                  </a>
+                </div>
+              </div>
+
+              <div class="score-spotlight">
+                <p class="result-score-label">Overall Score</p>
+                <div class="score-spotlight__value">
+                  <strong id="score-value">76</strong>
+                  <span>/100</span>
+                </div>
+                <p class="result-band" id="score-band">Strong fit</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="report-section">
+          <div class="content-wrapper report-grid">
+            <article class="report-card report-card--full">
+              <div class="report-card__head">
+                <div>
+                  <p class="card-label">Executive Summary</p>
+                  <p class="report-card__subcopy">
+                    A clearer view of why this result surfaced and what it suggests.
+                  </p>
+                </div>
+              </div>
+              <div class="report-copy">
+                <p id="summary-paragraph-one"></p>
+                <p id="summary-paragraph-two"></p>
+              </div>
+            </article>
+          </div>
+
+          <div class="content-wrapper report-grid report-grid--three">
+            <article class="report-card">
+              <div class="report-card__head">
+                <div>
+                  <p class="card-label">Category Breakdown</p>
+                  <p class="report-card__subcopy">Where the strongest alignment appears.</p>
+                </div>
+              </div>
+              <div class="breakdown-list" id="breakdown-list"></div>
+            </article>
+
+            <article class="report-card">
+              <div class="report-card__head">
+                <div>
+                  <p class="card-label">Strongest Signals</p>
+                  <p class="report-card__subcopy">The answers that most strengthened the case.</p>
+                </div>
+              </div>
+              <ul class="insight-list" id="positive-list"></ul>
+            </article>
+
+            <article class="report-card">
+              <div class="report-card__head">
+                <div>
+                  <p class="card-label">Watchouts</p>
+                  <p class="report-card__subcopy">The main constraints or decision points to review.</p>
+                </div>
+              </div>
+              <ul class="insight-list" id="caution-list"></ul>
+            </article>
+          </div>
+
+          <div class="content-wrapper report-grid">
+            <article class="report-card report-card--full">
+              <div class="report-card__head">
+                <div>
+                  <p class="card-label">Answer Breakdown</p>
+                  <p class="report-card__subcopy">
+                    Every response that contributed to your score, grouped by category.
+                  </p>
+                </div>
+              </div>
+              <div class="answer-breakdown" id="answer-breakdown"></div>
+            </article>
+          </div>
+
+          <div class="content-wrapper report-footer">
+            <div class="report-footer__actions">
+              <button class="button button-secondary" id="restart-assessment">Retake Assessment</button>
+              <button class="button button-secondary" id="back-to-start">Return To Intro</button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
